@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/join/join",
+    "pages/courseIndex/courseIndex",
+    "pages/attIndex/attIndex",
+    "pages/attIndex/attOnline",
+    "pages/attIndex/attSuc",
+    "pages/attIndex/attLate",
+    "pages/attIndex/attFail",
+    "pages/attIndex/attLeave",
+    "pages/attIndex/attNo",
+    "pages/attIndex/attNo",
+    "pages/topicIndex/topicIndex",
+    "pages/topicIndex/topicSubFail",
+    "pages/topicIndex/topicFail",
+    "pages/topicIndex/topicSubSuc",
+    "pages/topicIndex/topicNo",
+    "pages/lessonIndex/lessonIndex",
+    "pages/lessonIndex/lessonFail",
+    "pages/lessonIndex/lessonLeave",
+    "pages/lessonIndex/lessonLeaveScore",
+    "pages/lessonIndex/lessonNotTopic",
+    "pages/my/my",
+    "pages/thesis/thesis"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {  
+   "color": "#bfbfbf",  
+   "selectedColor": "#10a0ea",  
+   "borderStyle":"white",  
+   "list": [{  
+     "selectedIconPath": "images/lessons.png",  
+     "iconPath": "images/lesson.png",  
+     "pagePath": "pages/index/index",  
+     "text": "课程"  
+   }, {  
+     "selectedIconPath": "images/thesiss.png",  
+     "iconPath": "images/thesis.png",  
+     "pagePath": "pages/thesis/thesis",  
+     "text": "论文"  
+   }, {  
+     "selectedIconPath": "images/mys.png",  
+     "iconPath": "images/my.png",  
+     "pagePath": "pages/my/my",  
+     "text": "我的"  
+   }]  
+ }
+}
