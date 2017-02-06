@@ -1,15 +1,15 @@
 {
   "pages":[
-    "pages/index/index",
     "pages/join/join",
+    "pages/index/index",
     "pages/courseIndex/courseIndex",
+    "pages/logs/logs",
     "pages/attIndex/attIndex",
     "pages/attIndex/attOnline",
     "pages/attIndex/attSuc",
     "pages/attIndex/attLate",
     "pages/attIndex/attFail",
     "pages/attIndex/attLeave",
-    "pages/attIndex/attNo",
     "pages/attIndex/attNo",
     "pages/topicIndex/topicIndex",
     "pages/topicIndex/topicSubFail",
@@ -26,9 +26,10 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#0e90d2",
+    "navigationBarTitleText": "创新创业基础",
+    "navigationBarTextStyle":"#fff",
+    "backgroundColor":"#f0f0f2"
   },
   "tabBar": {  
    "color": "#bfbfbf",  
@@ -37,7 +38,7 @@
    "list": [{  
      "selectedIconPath": "images/lessons.png",  
      "iconPath": "images/lesson.png",  
-     "pagePath": "pages/index/index",  
+     "pagePath": "pages/courseIndex/courseIndex",  
      "text": "课程"  
    }, {  
      "selectedIconPath": "images/thesiss.png",  

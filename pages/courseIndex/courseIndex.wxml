@@ -1,2 +1,9 @@
 <!--pages/courseIndex/courseIndex.wxml-->
-<text>pages/courseIndex/courseIndex.wxml</text>
+<view class="title">
+    <text>本次课程为第{{ num }}次课程</text>
+</view>
+<view class="btnBox">
+<button class="bigBtn" bindtap="bindViewTapAtt">签到</button>
+<button class="bigBtn" bindtap="bindViewTapTopic">课堂答题</button>
+<button class="bigBtn" bindtap="bindViewTapLesson">本次得分</button>
+</view>

@@ -1,6 +1,23 @@
 // pages/courseIndex/courseIndex.js
 Page({
-  data:{},
+  data:{
+    num:1,
+  },
+  bindViewTapAtt: function() {
+    wx.navigateTo({
+      url: '../attIndex/attIndex'
+    })
+  },
+  bindViewTapTopic: function() {
+    wx.navigateTo({
+      url: '../topicIndex/topicIndex'
+    })
+  },
+  bindViewTapLesson: function() {
+    wx.navigateTo({
+      url: '../lessonIndex/lessonIndex'
+    })
+  },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
   },

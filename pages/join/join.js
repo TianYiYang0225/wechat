@@ -1,8 +1,27 @@
 // pages/join/join.js
+var app = getApp();
 Page({
-  data:{},
-  onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
+  data:{
+    userInfo: {},
+    stu_input:'',
+  },
+  bindViewTapJoin: function() {
+    wx.switchTab({
+      url: '../courseIndex/courseIndex'
+    })
+  },
+  listen:function(e){
+    this.data.stu_input = e.detail.value
+    console.log(this.data.stu_input);
+  },
+  onLoad:function(){
+    var that = this
+    app.getUserInfo(function(userInfo){
+      //更新数据
+      that.setData({
+        userInfo:userInfo
+      })
+    })
   },
   onReady:function(){
     // 页面渲染完成
