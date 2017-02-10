@@ -22,6 +22,15 @@ Page({
     wx.getStorage({
       key: 'stu_id',
       success: function(res){
+          wx.showModal({
+          title: '提示',
+          content: '你的学号为'+res.data,
+          success: function(res) {
+              if (res.confirm) {
+
+              }
+          }
+          });
         console.log(res.data)
       },
       fail: function() {
