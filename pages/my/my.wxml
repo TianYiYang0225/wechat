@@ -1,2 +1,66 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="info-box">
+    <view class="headimg">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="info">
+        <view class="text-box"><text class="label">姓名：</text><text class="content">赵玉成</text></view>
+        <view class="text-box"><text class="label">班级：</text><text class="content">电信14-1</text></view>
+        <view class="text-box bottom"><text class="label">学号：</text><text class="content">140206101</text></view>
+    </view>
+</view>
+<view class="main">
+    <view class="title">
+        <text>总成绩</text>
+    </view>
+    <view class="score">
+        <view class="radius">80</view>
+    </view>
+    <view class="title">
+        <text>每节课分数</text>
+    </view>
+    <view>
+    <table class="am-table">
+    <thead>
+        <tr>
+            <th>节数</th>
+            <th>出勤状态</th>
+            <th>答题得分</th>
+            <th>本节课得分</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>出勤</td>
+            <td>3</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>出勤</td>
+            <td>3</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>出勤</td>
+            <td>3</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>出勤</td>
+            <td>3</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>出勤</td>
+            <td>3</td>
+            <td>6</td>
+        </tr>
+    </tbody>
+</table>
+    </view>
+</view>

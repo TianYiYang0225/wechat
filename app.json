@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/join/join",
+    "pages/my/my",
     "pages/index/index",
     "pages/courseIndex/courseIndex",
     "pages/logs/logs",
@@ -21,7 +22,7 @@
     "pages/lessonIndex/lessonLeave",
     "pages/lessonIndex/lessonLeaveScore",
     "pages/lessonIndex/lessonNotTopic",
-    "pages/my/my",
+
     "pages/thesis/thesis"
   ],
   "window":{

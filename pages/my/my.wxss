@@ -1,1 +1,66 @@
 /* pages/my/my.wxss */
+.userinfo-avatar {
+  width: 188rpx;
+  height: 188rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.info-box{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: #10a0ea;
+    color: #fff
+}
+.headimg{
+    width: 30%;
+    text-align: center;
+    padding-top: 32rpx;
+    padding-left: 60rpx;
+
+}
+.info{
+    width: 70%;
+}
+.label{
+    margin-left: 80rpx;
+}
+.text-box{
+    margin-top: 40rpx
+}
+.bottom{
+    margin-bottom: 40rpx
+}
+.main{
+    color:#fff;
+}
+.title{
+    text-align: center;
+    margin-top: 50rpx;
+    font-weight: bolder;
+    font-size: 20pt
+}
+.score{
+    display: flex;
+    justify-content: center;
+}
+.radius{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+    background-color: #10a0ea;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 36pt;
+    font-weight: bolder;
+    line-height: 190rpx;
+    margin-top: 30rpx
+}
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color: #54bdeb;  
+}  
+.am-table{
+    display: table
+}
