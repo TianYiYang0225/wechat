@@ -19,6 +19,19 @@ Page({
     })
   },
   onLoad:function(options){
+    wx.getStorage({
+      key: 'stu_id',
+      success: function(res){
+        console.log(res.data)
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
+    console.log()
     // 页面初始化 options为页面跳转所带来的参数
   },
   onReady:function(){

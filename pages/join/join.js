@@ -67,6 +67,10 @@ Page({
                                     success: function(res) {
                                         Bmob.User.logIn(stu_id, open_id, {
                                         success: function(user) {
+                                            wx.setStorage({
+                                                key: 'stu_id',
+                                                data: stu_id,
+                                            })
                                             wx.switchTab({
                                             url: '../courseIndex/courseIndex'
                                             })
@@ -98,7 +102,10 @@ Page({
                                                 content: '你已注册成功，该学号和该微信唯一绑定，请以后都使用该微信登录',
                                                 success: function(res) {
                                                     if (res.confirm) {
-                                                        this.setData.state = ''
+                                                        wx.setStorage({
+                                                          key: 'stu_id',
+                                                          data: stu_id,
+                                                        })
                                                     }
                                                 }
                                                 });
