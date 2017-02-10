@@ -65,56 +65,60 @@ Page({
                                     query.equalTo('username', stu_id);  // find all the women
                                     query.find({
                                     success: function(res) {
-                                        Bmob.User.logIn(stu_id, open_id, {
-                                        success: function(user) {
-                                            wx.setStorage({
-                                                key: 'stu_id',
-                                                data: stu_id,
-                                            })
-                                            wx.switchTab({
-                                            url: '../courseIndex/courseIndex'
-                                            })
-                                        },
-                                        error: function(user, error) {
-                                            wx.showModal({
-                                            title: '登录错误',
-                                            content: '你的学号已绑定对应的微信号，请使用第一次绑定的微信号登录',
-                                            success: function(res) {
-                                                if (res.confirm) {
-                                                    that.setData({
-                                                        state : '提交'
-                                                    })
+                                        if(res.length<=0){
+                                            var user = new Bmob.User();//开始注册用户
+                                            user.set("username", stu_id);
+                                            user.set("password", open_id);//因为密码必须提供，但是微信直接登录小程序是没有密码的，所以用openId作为唯一密码
+                                            user.set("userData", userData);
+                                            user.signUp(null, {
+                                                success: function(res) {
+                                                    wx.showModal({
+                                                    title: '提示',
+                                                    content: '你已注册成功，该学号和该微信唯一绑定，请以后都使用该微信登录',
+                                                    success: function(res) {
+                                                        if (res.confirm) {
+                                                            wx.setStorage({
+                                                            key: 'stu_id',
+                                                            data: stu_id,
+                                                            })
+                                                            wx.switchTab({
+                                                            url: '../courseIndex/courseIndex'
+                                                            })
+                                                        }
+                                                    }
+                                                    });
+                                                },
+                                                error: function(userData, error) {
+                                                console.log(error)
                                                 }
-                                            }
                                             });
-                                        }
-                                        });
-                                    },
-                                    error: function(res){
-                                        var user = new Bmob.User();//开始注册用户
-                                        user.set("username", stu_id);
-                                        user.set("password", open_id);//因为密码必须提供，但是微信直接登录小程序是没有密码的，所以用openId作为唯一密码
-                                        user.set("userData", userData);
-                                        user.signUp(null, {
-                                            success: function(res) {
+                                        }else{
+                                            Bmob.User.logIn(stu_id, open_id, {
+                                            success: function(user) {
+                                                    wx.setStorage({
+                                                        key: 'stu_id',
+                                                        data: stu_id,
+                                                    })
+                                                wx.switchTab({
+                                                url: '../courseIndex/courseIndex'
+                                                })
+                                            },
+                                            error: function(user, error) {
                                                 wx.showModal({
-                                                title: '提示',
-                                                content: '你已注册成功，该学号和该微信唯一绑定，请以后都使用该微信登录',
+                                                title: '登录错误',
+                                                content: '你的学号已绑定对应的微信号，请使用第一次绑定的微信号登录',
                                                 success: function(res) {
                                                     if (res.confirm) {
-                                                        wx.setStorage({
-                                                          key: 'stu_id',
-                                                          data: stu_id,
+                                                        that.setData({
+                                                            state : '提交'
                                                         })
                                                     }
                                                 }
                                                 });
-                                            },
-                                            error: function(userData, error) {
-                                            console.log(error)
                                             }
-                                        });
-                                    }
+                                            });
+                                        }
+                                    },
                                     });
                                 }
                             },
