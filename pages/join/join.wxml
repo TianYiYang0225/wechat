@@ -1,7 +1,7 @@
 <!--pages/join/join.wxml-->
 <view class="container">
   <view class="title-box">
-    <text class="title">请绑定学号</text>
+    <text class="title">请输入学号</text>
   </view>
   <view class="ipt-box">
     <input class="ipt" placeholder-style="color:#10a0ea" placeholder="在此键入学号" bindinput="listen" auto-focus/>
