@@ -1,1 +1,30 @@
 /* pages/attIndex/attFail.wxss */
+.wrongicon{
+    margin-top: 10%;
+     flex: 1;
+     text-align: center;
+}
+.wrongfont{
+    flex: 1;
+    size: 20px;
+    color: crimson;
+    text-align:center;
+    margin-top: 5%;
+    line-height:100px;
+    font-weight: 600;
+}
+.waringfont{
+    color: #d81e06;
+    size: 14px;
+    font-weight:bolder;
+}
+.back5{
+    flex: 1;
+    background-color: #54bdeb;
+    color: #fff;
+    margin-top: 8%;
+    width: 150px;
+    height:30px;
+    line-height: 30px;
+    font-size: 15px;
+}
