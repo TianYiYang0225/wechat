@@ -1,2 +1,13 @@
 <!--pages/attIndex/attFail.wxml-->
-<text>pages/attIndex/attFail.wxml</text>
+<view>
+<view class="wrongicon">
+<icon type="cancel" size="160" ></icon>
+</view>
+<view class="wrongfont">
+<text>签到状态：未签到</text>
+<view>
+<text class="waringfont">如有任何疑问请咨询助教</text>
+</view>
+</view>
+<button bindtap="back5" class="back5">返回</button>
+</view>
