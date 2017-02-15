@@ -1,6 +1,11 @@
 // pages/attIndex/attFail.js
 Page({
   data:{},
+  back5:function(){
+    wx.navigateBack({
+      delta: 1, // 回退前 delta(默认为1) 页面
+    })
+  },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
   },
